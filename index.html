@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetPal — Personal Budget Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BudgetPal</h1>
+            <p class="subtitle">Your Simple Personal Budget Manager</p>
+        </header>
+        <section class="summary">
+            <div class="summary-item income">
+                <span>Total Income</span>
+                <span id="total-income">$0.00</span>
+            </div>
+            <div class="summary-item expense">
+                <span>Total Expense</span>
+                <span id="total-expense">$0.00</span>
+            </div>
+            <div class="summary-item balance">
+                <span>Current Balance</span>
+                <span id="current-balance">$0.00</span>
+            </div>
+        </section>
+        <form id="entry-form" autocomplete="off">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" step="0.01" min="0.01" required>
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <button type="submit" id="add-btn">Add</button>
+        </form>
+        <section class="entries-section">
+            <h2>Entries</h2>
+            <ul id="entries-list"></ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
